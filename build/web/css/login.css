@@ -1,0 +1,78 @@
+body {
+  background-image: url("../img/cover-img-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.login-panel {
+  position: absolute;
+  margin: 150px auto auto auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 350px;
+  height: auto;
+}
+
+.login-panel-logo {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.login-panel-logo img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: auto;
+}
+
+.login-panel-content {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.login-panel-header {
+  border-radius: 5px 5px 0 0;
+  background-color: #03a9f4;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.login-panel-form {
+
+}
+
+.login-panel-form .row {
+  margin-bottom: 0;
+}
+
+.login-panel-footer {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 20px;
+  text-align: center;
+}
+
+.login-panel-footer > button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]) {
+  border-bottom: 1px solid #03a9f4;
+  box-shadow: 0 1px 0 0 #03a9f4;
+}

@@ -1,0 +1,84 @@
+/***** NAVIGATION *****/
+
+.top-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  background: transparent;
+  transition: transform 0.2s;
+}
+
+.top-menu.scrolled {
+  transform: translateY(-100%);
+}
+
+
+nav {
+  border-bottom: 3px solid #0288d1 !important;
+  margin-bottom: 0px !important;
+}
+
+nav ul li {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+nav ul li.current {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+nav ul li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/***** PAGINATION *****/
+
+.pagination li {
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  line-height: 30px;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.pagination li a {
+  color: #444;
+}
+
+.pagination li.active a {
+  color: #fff;
+}
+
+.pagination li.active {
+  background-color: #03a9f4;
+}
+
+.pagination li.disabled a {
+  cursor: default;
+  color: #999;
+}
+
+.pagination li i {
+  font-size: 2.2rem;
+  vertical-align: middle;
+}
+
+.pagination li.pages ul li {
+  display: inline-block;
+  float: none;
+}
