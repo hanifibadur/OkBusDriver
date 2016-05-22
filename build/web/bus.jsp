@@ -41,7 +41,7 @@
                 halaman = Integer.parseInt(request.getParameter("halaman"));
             }
 
-            int limit = 3;
+            int limit = 4;
             int current = (limit * halaman);
             
             Class.forName("com.mysql.jdbc.Driver");
@@ -50,7 +50,7 @@
             Connection connection = DriverManager.getConnection(url, "root", "1234");
 
             Statement statement = connection.createStatement();
-            String query = "SELECT * FROM bus INNER JOIN tipe ON bus.id_tipe = tipe.id_tipe WHERE id_po = " + id_po + ";";
+            String query = "SELECT * FROM bus INNER JOIN tipe ON bus.id_tipe = tipe.id_tipe WHERE id_po = " + id_po + " ORDER BY bus.id_bus DESC;";
             ResultSet resultSet = statement.executeQuery(query);
 
             Statement statementTipe = connection.createStatement();
@@ -217,8 +217,8 @@
                             tipe_idx = tipe_str + tipe_int;
                     %>
                     <p>
-                        <input name="id_tipe" value="<%=resultSetTipe.getString("id_tipe")%>" type="radio" id="<%=tipe_idx%>" />
-                        <label for="<%=tipe_idx%>"><%=resultSetTipe.getString("tipe_tipe")%></label>
+                        <input name="id_tipe" value="<%=resultSetTipe.getString("id_tipe")%>" type="radio" id="<%=tipe_idx%>" required/>
+                        <label for="<%=tipe_idx%>"><%=resultSetTipe.getString("tipe_tipe")%> | <%=resultSetTipe.getString("fasilitas_tipe")%></label>
                     </p>
                     <%
                             tipe_int++;
